@@ -1,0 +1,75 @@
+
+
+        * {
+  box-sizing: border-box;
+}
+
+#offline, #online {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#off, #on {
+  list-style-type: square;
+  padding: 0;
+  margin: 0;
+}
+
+#off li a, #on li a {
+  border: 1px solid #ddd;
+  margin-top: -1px;
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#off li a:hover:not(.header), #on li a:hover:not(.header) {
+  background-color: #eee;
+}
+.card{
+  border-radius: 30px;
+  text-align: center;
+  margin: auto;
+  width: 70%;
+  display: inline-flex;
+  margin-bottom: : 20px;
+
+
+}
+.card-img-top{
+  max-height: 100%;
+  display: none;
+
+
+  /* border-radius: 30px; */
+}
+
+
+.list-group-item{
+  width: 100%;
+}
+@media screen and (max-width: 500px) {
+  .card-img-top{
+    float : none;
+    display: block;
+  }
+}
+
+#myModal{
+  margin: auto;
+  text-align: center;
+  top: 25%;
+  overflow-y: scroll;
+  overflow: scroll;
+  /* border-radius: 25px; */
+
+}

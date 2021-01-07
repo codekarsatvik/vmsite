@@ -1,0 +1,493 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Vivekanand Manch">
+    <meta name="description" content="">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title -->
+    <title>Vivekanand Manch</title>
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="apple-touch-icon" href="images/title.png">
+    <link rel="shortcut icon" type="image/ico" href="https://ik.imagekit.io/slashit/title_VGVHIMGFr.png" />
+    <!-- Plugin-CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/icofont.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- Main-Stylesheets -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+
+
+
+    <style>
+        * {
+  box-sizing: border-box;
+}
+
+#offline, #online {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#off, #on {
+  list-style-type: square;
+  padding: 0;
+  margin: 0;
+}
+
+#off li a, #on li a {
+  border: 1px solid #ddd;
+  margin-top: -1px;
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#off li a:hover:not(.header), #on li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+
+
+* { box-sizing: border-box; }
+
+body { font-family: sans-serif; }
+
+.carousel {
+  background-image: url(https://ik.imagekit.io/slashit/wp2024221_Odw3fymDsx.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 5px;
+}
+
+.carousel-cell {
+  width: 100%;
+  height: 500px;
+ /*flex-box, center image in cell */
+  display: -webkit-box;
+  display: -webkit-flex;
+  display:         flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+
+.carousel-cell img {
+  max-width: 100%;
+  max-height: 100%;
+  /* dim unselected */
+
+  opacity: 0.7;
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+  /* -webkit-filter: blur(50px);
+          filter: blur(50px); */
+  -webkit-transition: opacity 0.5s, -webkit-transform 0.5s, transform 0.5s, -webkit-filter 0.5s, filter 0.5s;
+          transition: opacity 0.5s, transform 0.5s, filter 0.5s;
+}
+
+/* brighten selected image */
+
+.carousel-cell.is-selected img {
+    border-radius: 20px;
+    box-shadow: 5px;
+  opacity: 1;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  -webkit-filter: none;
+          filter: none;
+}
+
+@media screen and ( min-width: 768px ) {
+  .carousel-cell {
+    height: 550px;
+  }
+}
+
+@media screen and ( min-width: 960px ) {
+  .carousel-cell {
+    width: 100%;
+  }
+}
+
+
+/* buttons, no circle */
+.flickity-prev-next-button {
+  width: 60px;
+  height: 60px;
+  background: transparent;
+  opacity: 0.6;
+}
+.flickity-prev-next-button:hover {
+  background: transparent;
+  opacity: 1;
+}
+/* arrow color */
+
+.flickity-prev-next-button .arrow {
+  fill: black;
+}
+.flickity-prev-next-button.no-svg {
+  color: black;
+}
+/* closer to edge */
+
+.flickity-prev-next-button.previous { left: 0; }
+.flickity-prev-next-button.next { right: 0; }
+/* hide disabled button */
+
+.flickity-prev-next-button:disabled {
+  display: none;
+}
+*/
+
+    </style>
+
+
+
+
+</head>
+
+<body class="site2" data-spy="scroll" data-target=".mainmenu-area">
+    <!--Preloader-->
+    <div class="preloader">
+        <div class="spinner"></div>
+    </div>
+
+
+    <!-- Mainmenu-Area -->
+    <nav class="navbar mainmenu-area" data-spy="affix" data-offset-top="197">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="navbar-header smoth">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainmenu">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="index.html" style="color : white; font-size: 20px; font-family: Brighly Crush;">VIVEKANAND MANCH</a>
+                    </div>
+                    <div class="collapse navbar-collapse navbar-right" id="mainmenu">
+                        <ul class="nav navbar-nav primary-menu">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/events">Events</a></li>
+                            <li><a href="/gallery">Gallery</a></li>
+                            <li><a href="/videogallery">Video Gallery</a></li>
+                            <li><a href="/members">Members</a></li>
+                            <li><a href="/library">VM Library</a></li>
+                            <li class="active"><a href="/funzone">Fun-Zone</a></li>
+                    <!--    <li><a href="blog.html">Blogs</a></li>	     -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Mainmenu-Area-/ -->
+
+
+    <!--Header-Area-->
+    <header class="header-area overlay" id="home-area" style="background: url('https://ik.imagekit.io/slashit/h3_LXLPWkzr_.jpg') no-repeat scroll center center / cover;position: relative;width: 100%;height: 100%;">
+        <div class="vcenter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 text-center">
+                        <div class="header-text">
+                            <div class="wow fadeInUp upper latter-space" data-wow-delay="0.2s">Vivekanand Manch</div>
+                            <h3 class="header-title wow fadeInUp upper" data-wow-delay="0.4s">Fun-Zone<span class="dot"></span></h3>
+                            <div class="wow fadeInUp" data-wow-delay="0.7s">
+                                <a href="#contact" class="bttn bttn-lg bttn-primary">Contact Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="smoth">
+            <a href="#about-area" class="scrolldown"><i class="icofont icofont-bubble-down"></i></a>
+        </div>
+    </header>
+    <!--Header-Area-/-->
+
+
+
+
+
+
+<section class="section-padding gray-bg">
+<div class="page-title"><center><h2 class="title">HARYANA DAY</h2></center></div>
+<div class="carousel js-flickity">
+
+  <div class="carousel-cell">
+    <img src="https://ik.imagekit.io/slashit/WhatsApp_Image_2020-10-31_at_9.58.36_PM_l9QieLIDG.jpeg" />
+  </div>
+
+
+  <div class="carousel-cell">
+    <img src="https://ik.imagekit.io/slashit/WhatsApp_Image_2020-10-31_at_9.58.37_PM_TILzJiBLZ.jpeg"/>
+  </div>
+
+
+  <div class="carousel-cell">
+    <img src="https://ik.imagekit.io/slashit/WhatsApp_Image_2020-10-31_at_9.58.38_PM_tZkfePcFHa.jpeg" />
+  </div>
+  <div class="carousel-cell">
+    <img src="https://ik.imagekit.io/slashit/WhatsApp_Image_2020-10-31_at_10.50.10_PM_EIc6w2tpo.jpeg" />
+  </div>
+
+
+  <div class="carousel-cell">
+    <img src="https://ik.imagekit.io/slashit/WhatsApp_Image_2020-10-31_at_9.58.38_PM__1__8ySfeDXJtN.jpeg" />
+  </div>
+
+  <div class="carousel-cell">
+    <img src="https://ik.imagekit.io/slashit/WhatsApp_Image_2020-10-31_at_9.58.39_PM__1__hyy5z4Bpg9.jpeg" />
+  </div>
+
+  <div class="carousel-cell">
+    <img src="https://ik.imagekit.io/slashit/WhatsApp_Image_2020-10-31_at_9.58.39_PM_GsCy7W4aLg.jpeg" />
+  </div>
+
+
+  <div class="carousel-cell">
+    <img src="https://ik.imagekit.io/slashit/WhatsApp_Image_2020-10-31_at_9.58.40_PM_JDVt2VNYgZ.jpeg" />
+  </div>
+
+
+
+
+
+</div>
+
+    </section>
+
+        <section class="section-padding">
+            <div class="container">
+                    <div class="col-xs-12 col-sm-12">
+                        <center><b><h2>Case Studies</h2></b></center>
+                        <input type="text" id="online" onkeyup="onlineSearch()" placeholder="Search for the case study." >
+                            <ul id="on">
+                                <li><a href="https://ik.imagekit.io/slashit/1-converted_4a4ZQxtnS.pdf" target="_blank">The Revolt of 1857!!</a></li>
+                            </ul>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <section class="section-padding">
+        <div class="container">
+                <div class="col-xs-12 col-sm-12">
+                    <center><b><h2>Newsletters</h2></b></center>
+                    <input type="text" id="online" onkeyup="onlineSearch()" placeholder="Search for the month.." >
+                        <ul id="on">
+                            <li><a href="https://ik.imagekit.io/slashit/july_digest__3__ij6wf3dlV.pdf" target="_blank">JULY 2020</a></li>
+                        </ul>
+                        <ul id="on">
+                            <li><a href="https://ik.imagekit.io/slashit/VM_Newsletter_zB58Uz_Or.pdf" target="_blank">AUGUST 2020</a></li>
+                        </ul>
+                        <ul id="on">
+                            <li><a href="https://ik.imagekit.io/slashit/Vm_newsletter_sept2020_E6ceEZjFT.pdf" target="_blank">SEPTEMBER 2020</a></li>
+                        </ul>
+                        <ul id="on">
+                            <li><a href="https://ik.imagekit.io/slashit/VM_Newsletter_Oct2020_HPzKBP-ZK.pdf" target="_blank">OCTOBER 2020</a></li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <section class="section-padding gray-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12">
+                    <center><b><h2>Game Time</h2></b></center>
+                    <input type="text" id="online" onkeyup="onlineSearch()" placeholder="Search for the game.." >
+                        <ul id="on">
+                            <li><a href="https://ik.imagekit.io/slashit/findit_59LPQnjiD.pdf" target="_blank">Find IT!!</a></li>
+                            <li><a href="https://2048-the-game.netlify.app" target="_blank">2048 - The GAME</a></li>
+                            <li><a href="https://codekarsatvik.github.io/modigame" target="_blank">Catch Modi ji </a></li>
+                            <li><a href="#" target="_blank">Is Baar Game Hum Khel lete hai , Aap Sab Diwali Celebate kro ! Happy Diwali 🪔 </a></li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="section-padding" id="contact-area">
+        <div class="container">
+            <div id="disqus_thread"></div>
+                <script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+                (function() { // DON'T EDIT BELOW THIS LINE
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://vm-funzone.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+                </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+    </section>
+
+
+
+
+
+
+    <!-- Footer-Area -->
+    <footer class="footer-area gray-bg" id="contact">
+        <div class="footer-top section-padding">
+            <div class="container">
+                <div class="row">
+                	<center>
+                    <div class="col-xs-12 col-md-4">
+                        <div class="footer-text">
+                            <h4 class="upper">Vivekanand Manch</h4>
+                            <p>Contact Us</p>
+                            <div class="social-menu">
+                                <p>JCBUST, Sector-6, Faridabad, Haryana, India</p>
+                                <p>9053896380</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-4">
+                        <div class="footer-text">
+                            <h4 class="upper">Like Us! Follow Us! Mail Us!</h4>
+                            <div class="social-menu">
+                                <a href="https://www.facebook.com/pg/vivekanandmanch/about/"><i class="icofont icofont-social-facebook" style="font-size: 28px;"></i></a>
+                                <a href="https://www.instagram.com/vivekanandmanch/?hl=en"><i class="icofont icofont-social-instagram" style="font-size: 28px;"></i></a>
+                                <a href="http://vivekanand manch.ymcaust@gmail.com/"><i class="icofont icofont-email" style="font-size: 28px;"></i></a>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-4">
+                        <div class="footer-single">
+                            <h4 class="upper">Links</h4>
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="events.html">Events</a></li>
+                                <li><a href="gallery.html">Gallery</a></li>
+                                <li><a href="video_gallery.html">Video Gallery</a></li>
+                                <li><a href="members.html">Members</a></li>
+                                <li><a href="library.html">VM Library</a></li>
+                                <li><a href="fun.html">Fun-Zone</a></li>
+                               <!-- <li><a href="#">Blogs</a></li>  -->
+                            </ul>
+                        </div>
+                    </div>
+                </center>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <p class="copyright">Copyright &copy;<script>document.write(new Date().getFullYear());</script><b> Vivekanand Manch</b> | All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer-Area / -->
+
+
+
+
+
+
+
+<script>
+function onlineSearch() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("online");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("on");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+
+</script>
+
+
+
+
+
+
+    <!--Vendor-JS-->
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <!--Plugin-JS-->
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/appear.js"></script>
+    <script src="js/bars.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/counterup.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/scrollUp.min.js"></script>
+    <script src="js/magnific-popup.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <!--Main-active-JS-->
+    <script src="js/main.js"></script>
+
+
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+
+
+    <script id="dsq-count-scr" src="//vm-funzone.disqus.com/count.js" async></script>
+
+
+
+</body>
+
+</html>
