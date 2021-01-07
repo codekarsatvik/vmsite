@@ -18,7 +18,9 @@
 
         <%- include('partials/header'); -%>
 
-
+        <% if(err) { %>
+<div class="user-message user-message--error"><%= err %></div>
+<% } %>
         <!-- Sing in  Form -->
         <section class="sign-in">
             <div class="container">

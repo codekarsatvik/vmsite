@@ -57,6 +57,8 @@ userSchema.plugin(findOrCreate);
 // added env variable for better security
 // userSchema.plugin(encrypt ,{secret : process.env.SECRET, encryptedFields : ["password"]});
     var imgurl = 'images/user.png';
+    var errsignup = '';
+    var auth = false ;
 const User = new mongoose.model("user", userSchema);
 passport.use(User.createStrategy());
 
@@ -80,6 +82,7 @@ passport.use(new GoogleStrategy({
     // console.log(profile);
     User.findOrCreate({ googleId: profile.id , name : profile.displayName , img : profile.photos[0].value  }, function (err, user) {
       imgurl = user.img;
+      auth = true ;
       return cb(err, user);
     });
   }
@@ -103,7 +106,7 @@ const memberSchema = new mongoose.Schema({
 const Member =  mongoose.model("member",memberSchema);
 
 app.get("/",(req,res)=>{
-  res.render("index",{auth : false, img : 'images/user.png'});
+  res.render("index",{auth , img : imgurl});
 
 })
 
@@ -143,11 +146,11 @@ app.get("/blog",(req,res)=>{
 
 })
 app.get("/signup",(req,res)=>{
-  res.render("signup");
+  res.render("signup",{err: errsignup});
 
 })
 app.get("/login",(req,res)=>{
-  res.render("login");
+  res.render("login",{err : errsignup});
 
 })
 app.get("/profile",(req,res)=>{
@@ -157,16 +160,15 @@ app.get("/profile",(req,res)=>{
 app.get("/secrets", function(req, res){
   User.find({"secret": {$ne: null}}, function(err, foundUsers){
     if (err){
-      alert('err');
+
       console.log(err);
+      errsignup = 'Check username/Password'
     } else {
       if (foundUsers) {
         // console.log(foundUsers);
 
-        if(foundUsers.googleId){
-          imgurl = foundUsers.img;
-        }
-        res.render("index", { auth : true , img : imgurl});
+        auth = true ;
+        res.render("index", { auth , img : imgurl});
       }
     }
   });
@@ -183,6 +185,7 @@ app.get('/auth/google/secrets',
 
   app.get('/logout',function(req,res){
     imgurl = 'images/user.png';
+    auth = false ;
     req.logout();
     res.redirect('/')
   })
@@ -193,7 +196,9 @@ app.get('/auth/google/secrets',
     User.register({username: req.body.username}, req.body.password, function(err, user){
       if (err) {
         console.log(err);
-        req.flash('errorMessage', err);
+
+        // req.flash('errorMessage', err);
+        errsignup =  'A user with the given username is already registered';
         res.redirect("/signup");
       } else {
         passport.authenticate("local")(req, res, function(){
@@ -213,7 +218,9 @@ app.post("/login", function(req, res){
   req.login(user, function(err){
     if (err) {
       console.log(err);
-      req.flash('errorMessage', err);
+      errsignup : 'Check Username and Password';
+      res.redirect('/login');
+      // req.flash('errorMessage', err);
     } else {
       passport.authenticate("local")(req, res, function(){
         res.redirect("/secrets");
